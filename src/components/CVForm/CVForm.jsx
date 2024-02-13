@@ -1,8 +1,10 @@
 import React from "react";
-import Header from "./Header";
+import Personal from "./Personal";
 
 export default function CVForm() {
-  return <div>
-    <Header/>
-  </div>;
+  return (
+    <div>
+      <Personal />
+    </div>
+  );
 }
