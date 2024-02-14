@@ -14,6 +14,10 @@ export default function Experience() {
             placeholder="Company"
         />
         <Input type="text"
+            name="work experience"
+            placeholder="Work Experience"
+        />
+        <Input type="text"
             name="city"
             placeholder="City"
         />
