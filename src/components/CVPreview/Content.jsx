@@ -5,7 +5,7 @@ import Title from "../Utils/Title";
 
 export default function Content() {
   return (
-    <div className="w-[650px] p-4" >
+    <div className="h-[1200px] p-4 bg-gray-100" >
       <div>
         <Title title="Description" />
         <p>
