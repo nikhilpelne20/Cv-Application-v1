@@ -25,7 +25,8 @@ export default function Experience() {
             name="to"
             placeholder="To"
         />
-       
+        <button>Delete</button>
+        <button className='button-blue'>Add</button>
     </Section>
   )
 }

@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    button {
+        @apply p-1 text-lg rounded mb-1;
+        background-color: var(--button-bg-color, rgba(255, 0, 0, 0.826));
+        transition: background-color 0.3s; /* Smooth transition for color change */
+        color: var(--button-text-color,#ffff);
+    }
+
+    button:hover {
+        background-color: var(--button-hover-bg-color, rgb(255, 105, 105));
+        color: var(--button-text-color,black);
+    }
+
+    .button-blue {
+        --button-bg-color: #0056b3;
+        --button-hover-bg-color: #007bff;
+    }
+
+    .button-green {
+        --button-bg-color: #28a745; 
+        --button-hover-bg-color: #218838; 
+    }
+}
