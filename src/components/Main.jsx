@@ -7,7 +7,7 @@ export default function Main() {
   return (
     <div>
       <Header/>
-      <div className="flex gap-16 px-20 pt-8 justify-center max-w-[1800px] m-auto">
+      <div className="flex gap-8 pt-8 justify-center m-auto max-w-[1800px] flex-wrap mb-20">
       <CVForm />
       <CVPreview/>
       </div>
