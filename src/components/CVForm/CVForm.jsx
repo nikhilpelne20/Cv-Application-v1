@@ -8,9 +8,13 @@ export default function CVForm() {
   return (
     <div>
       <Personal />
-      <Experience/>
-      <Education/>
-     
+      <Experience />
+      <Education />
+      <Section>
+        <button className="button-green">Generate PDF</button>
+        <button className="button-blue">Load Example</button>
+        <button>Reset</button>
+      </Section>
     </div>
   );
 }
