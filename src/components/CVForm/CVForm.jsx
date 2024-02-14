@@ -6,7 +6,7 @@ import Section from "../Utils/Section";
 
 export default function CVForm() {
   return (
-    <div>
+    <div className="w-[210mm] flex flex-col shadow-lg rounded border p-4 bg-gray-100 gap-2">
       <Personal />
       <Experience />
       <Education />
