@@ -10,16 +10,16 @@ export default function Sidebar() {
       </div>
       <Title title="Personal Details" />
       <div>
-        <p>Address </p>
-        <p>plot 68/c Vikrant Nagar, gokulPet rd 440023</p>
+        <p className="text-lg font-bold">Address </p>
+        <p></p>
       </div>
       <div>
-        <p>Phone </p>
-        <p>34222440023</p>
+        <p className="text-lg font-bold">Phone </p>
+        <p></p>
       </div>
       <div>
-        <p>Email </p>
-        <p>vputin@gmail.co.in</p>
+        <p className="text-lg font-bold" >Email </p>
+        <p></p>
       </div>
     </div>
   );
