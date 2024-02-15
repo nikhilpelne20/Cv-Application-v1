@@ -4,10 +4,10 @@ import Experience from "./Experience";
 import Education from "./Education";
 import Section from "../Utils/Section";
 
-export default function CVForm() {
+export default function CVForm({cv,onPersonalChange}) {
   return (
     <div className="w-[210mm] flex flex-col shadow-lg rounded border p-4 bg-gray-100 gap-2 ">
-      <Personal />
+      <Personal onChange={onPersonalChange} personalInfo={cv.personalInfo}/>
       <Experience />
       <Education />
       <Section>
