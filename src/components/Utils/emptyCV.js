@@ -15,7 +15,7 @@ const exampleCV = {
             company:"",
             workExperience:"",
             city:"",
-            form:"",
+            from:"",
             to:""
         },
     ]

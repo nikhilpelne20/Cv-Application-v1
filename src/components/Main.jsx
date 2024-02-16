@@ -26,18 +26,40 @@ export default function Main() {
             company:"",
             workExperience:"",
             city:"",
-            form:"",
+            from:"",
             to:""
           },
       ]
     }))
+  }
+
+  const handleExperienceChange = (e,id)=>{
+      const {name,value} = e.target
+      const updateExperience = cv.experience.map(exp=>{
+        if(exp.id === id){
+          return {
+            ...exp,[name]:value
+          };
+        }
+        return exp
+      })
+
+      setCv(prevState=>({
+        ...prevState,
+        experience:updateExperience
+      }))
   }
   
   return (
     <div>
       <Header/>
       <div className="flex gap-8 pt-8 justify-center m-auto max-w-[1800px] flex-wrap mb-20">
-      <CVForm onPersonalChange={handlePersonalChange} cv={cv} onAddExp ={addExperience}/>
+      <CVForm 
+      onPersonalChange={handlePersonalChange} 
+      cv={cv} 
+      onAddExp ={addExperience}
+      onExperienceChange={handleExperienceChange}
+      />
       <CVPreview cv={cv} />
       </div>
     </div>
