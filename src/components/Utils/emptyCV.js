@@ -18,6 +18,16 @@ const exampleCV = {
             from:"",
             to:""
         },
+    ],
+    education:[
+        {
+            id:crypto.randomUUID(),
+            universityName:"",
+            city:"",
+            degree:"",
+            from:"",
+            to:"",
+        },
     ]
 
 }

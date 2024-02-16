@@ -1,40 +1,29 @@
 import React from "react";
 import Title from "../Utils/Title";
 
-export default function EducationItem() {
+export default function EducationItem({education}) {
+  const educationItems = education.map((edu)=>{
+    return(
+        <div key={edu.id}>
+        <div className="flex gap-10">
+          <div className="flex">
+            <p>{edu.from}</p>
+            <span>-</span>
+            <p>{edu.to}</p>
+          </div>
+          <div>
+          <p>{edu.universityName}, <span>{edu.city}</span></p>
+            <p>- Degree: <span>{edu.degree}</span> </p>
+            <p>- Subject: <span>{edu.subject}</span> </p>
+          </div>
+        </div>
+      </div>
+    )
+  })
   return (
     <div>
       <Title title="Education" />
-      <div>
-        <div className="flex gap-10">
-          <div className="flex">
-            <p></p>
-            <span>-</span>
-            <p></p>
-          </div>
-          <div>
-          <p> <span></span></p>
-            <p>- Degree: <span></span> </p>
-            <p>- Subject: <span></span> </p>
-            <p>- GPA: <span></span> </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="flex gap-10">
-          <div className="flex">
-            <p></p>
-            <span>-</span>
-            <p></p>
-          </div>
-          <div>
-          <p><span></span></p>
-            <p>- Degree: <span></span></p>
-            <p>- Subject: <span></span></p>
-            <p>- GPA: <span></span></p>
-          </div>
-        </div>
-      </div>
+      {educationItems}
     </div>
   );
 }

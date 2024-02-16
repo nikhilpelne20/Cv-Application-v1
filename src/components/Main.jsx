@@ -59,6 +59,47 @@ export default function Main() {
       ...prevState,experience:deleteExp
     }))
   }
+
+  const handleEducationChange = (e,id)=>{
+    const {name,value}= e.target
+    const updateEducation = cv.education.map((edu)=>{
+      if(edu.id===id){
+        return {...edu,[name]:value}
+      }
+      return edu
+    })
+
+    setCv((prevState)=>({
+      ...prevState,education:updateEducation
+    }))
+  }
+
+  const addEducation = ()=>{
+    console.log("inside")
+    setCv((prevState)=>({
+      ...prevState,education:[
+        ...prevState.education,{
+          
+          id:crypto.randomUUID(),
+          universityName:"",
+          city:"",
+          degree:"",
+          from:"",
+          to:"",
+        },
+      ]
+    }))
+  }
+
+  const deleteEducation = (id)=>{
+    const deleteEdu = cv.education.filter((edu)=>{
+      return edu.id !== id
+    })
+
+    setCv((prevState)=>({
+      ...prevState,education:deleteEdu
+    }))
+  }
   
   return (
     <div>
@@ -67,9 +108,12 @@ export default function Main() {
       <CVForm 
       onPersonalChange={handlePersonalChange} 
       cv={cv} 
-      onAddExp ={addExperience}
       onExperienceChange={handleExperienceChange}
+      onAddExp ={addExperience}
       onDeleteExp ={deleteExperience}
+      onEducationChange={handleEducationChange}
+      onAddEdu={addEducation}
+      onDeleteEdu={deleteEducation}
       />
       <CVPreview cv={cv} />
       </div>

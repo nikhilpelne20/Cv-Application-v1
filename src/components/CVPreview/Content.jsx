@@ -3,8 +3,7 @@ import ExperienceItem from "./ExperienceItem";
 import EducationItem from "./EducationItem";
 import Title from "../Utils/Title";
 
-export default function Content({experienceInfo}) {
-  console.log(experienceInfo)
+export default function Content({experienceInfo,educationInfo}) {
   return (
     <div className="p-4 bg-gray-100 col-span-2 h-[271mm]" >
       <div>
@@ -13,7 +12,7 @@ export default function Content({experienceInfo}) {
         </p>
       </div>
       <ExperienceItem experience={experienceInfo}/>
-      <EducationItem />
+      <EducationItem education={educationInfo} />
     </div>
   );
 }
