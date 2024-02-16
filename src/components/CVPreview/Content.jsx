@@ -10,10 +10,9 @@ export default function Content({experienceInfo}) {
       <div>
         <Title title="Description" />
         <p>
-          {experienceInfo[0].position}
         </p>
       </div>
-      <ExperienceItem />
+      <ExperienceItem experience={experienceInfo}/>
       <EducationItem />
     </div>
   );
