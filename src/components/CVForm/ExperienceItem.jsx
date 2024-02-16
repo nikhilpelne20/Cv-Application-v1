@@ -2,7 +2,7 @@ import React from 'react'
 import Input from '../Utils/Input'
 export default function ExperienceItem({id,position,company,workExperience,city,from,to,onChange,onDelete}) {
   return (
-    <div>
+    <div className='flex flex-col w-full'>
         <Input 
             onChange={(e)=>onChange(e,id)}
             type="text"
