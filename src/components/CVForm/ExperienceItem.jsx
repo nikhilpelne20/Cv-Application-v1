@@ -1,6 +1,6 @@
 import React from 'react'
 import Input from '../Utils/Input'
-export default function ExperienceItem({id,position,company,workExperience,city,from,to,onChange}) {
+export default function ExperienceItem({id,position,company,workExperience,city,from,to,onChange,onDelete}) {
   return (
     <div>
         <Input 
@@ -45,7 +45,7 @@ export default function ExperienceItem({id,position,company,workExperience,city,
             placeholder="To"
             value={to}
         />
-        <button>Delete</button>
+        <button onClick={()=>onDelete(id)} >Delete</button>
     </div>
   )
 }

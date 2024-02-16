@@ -49,6 +49,16 @@ export default function Main() {
         experience:updateExperience
       }))
   }
+
+  const deleteExperience =(id)=>{
+    const deleteExp = cv.experience.filter((exp) => {
+      return exp.id !== id; 
+    });
+
+    setCv((prevState)=>({
+      ...prevState,experience:deleteExp
+    }))
+  }
   
   return (
     <div>
@@ -59,6 +69,7 @@ export default function Main() {
       cv={cv} 
       onAddExp ={addExperience}
       onExperienceChange={handleExperienceChange}
+      onDeleteExp ={deleteExperience}
       />
       <CVPreview cv={cv} />
       </div>
