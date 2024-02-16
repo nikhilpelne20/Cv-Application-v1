@@ -16,11 +16,28 @@ export default function Main() {
 
     }))
   }
+
+  const addExperience = ()=>{
+    setCv((prevState)=>({
+      ...prevState,experience:[
+          ...prevState.experience,{
+            id:crypto.randomUUID(),
+            position:"",
+            company:"",
+            workExperience:"",
+            city:"",
+            form:"",
+            to:""
+          },
+      ]
+    }))
+  }
+  
   return (
     <div>
       <Header/>
       <div className="flex gap-8 pt-8 justify-center m-auto max-w-[1800px] flex-wrap mb-20">
-      <CVForm onPersonalChange={handlePersonalChange} cv={cv}/>
+      <CVForm onPersonalChange={handlePersonalChange} cv={cv} onAddExp ={addExperience}/>
       <CVPreview cv={cv} />
       </div>
     </div>

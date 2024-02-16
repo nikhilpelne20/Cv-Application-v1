@@ -14,7 +14,7 @@ export default function Experience() {
             placeholder="Company"
         />
         <Input type="text"
-            name="work experience"
+            name="workExperience"
             placeholder="Work Experience"
         />
         <Input type="text"

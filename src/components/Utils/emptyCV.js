@@ -7,7 +7,19 @@ const exampleCV = {
         phoneNumber:"",
         email:"",
         description:""
-    }
+    },
+    experience:[
+        {
+            id:crypto.randomUUID(),
+            position:"",
+            company:"",
+            workExperience:"",
+            city:"",
+            form:"",
+            to:""
+        },
+    ]
+
 }
 
 
