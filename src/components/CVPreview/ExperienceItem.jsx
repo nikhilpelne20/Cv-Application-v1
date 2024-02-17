@@ -6,9 +6,9 @@ export default function ExperienceItem({ experience }) {
     return (
       <div className="flex gap-10" key={exp.id}>
         <div className="flex">
-          <p>{exp.from}</p>
+          <p className="w-[35px]">{exp.from}</p>
           <span>-</span>
-          <p>{exp.to}</p>
+          <p className="w-[40px]">{exp.to}</p>
         </div>
         <div>
           <p>

@@ -7,9 +7,9 @@ export default function EducationItem({education}) {
         <div key={edu.id}>
         <div className="flex gap-10">
           <div className="flex">
-            <p>{edu.from}</p>
+            <p className="w-[35px]">{edu.from}</p>
             <span>-</span>
-            <p>{edu.to}</p>
+            <p className="w-[40px]">{edu.to}</p>
           </div>
           <div>
           <p>{edu.universityName}, <span>{edu.city}</span></p>
