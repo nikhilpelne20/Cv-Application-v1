@@ -4,6 +4,8 @@ import Input from '../Utils/Input'
 import TextArea from '../Utils/TextArea'
 
 export default function Personal({onChange,personalInfo}) {
+    console.log(personalInfo.firstName) 
+    console.log(personalInfo.lastName)
   return (
     <Section title="Personal Information">
         <Input

@@ -3,6 +3,7 @@ import CVForm from "./CVForm/CVForm";
 import Header from "./Header";
 import CVPreview from "./CVPreview/CVPreview";
 import exampleCV from "./Utils/emptyCv";
+import sampleCV from "./Utils/exampleCV";
 
 export default function Main() {
   const [cv,setCv] = useState(exampleCV)
@@ -100,20 +101,25 @@ export default function Main() {
       ...prevState,education:deleteEdu
     }))
   }
+
+  const LoadExampleCV = ()=>{
+    setCv(sampleCV)
+  }
   
   return (
     <div>
       <Header/>
       <div className="flex gap-8 pt-8 justify-center m-auto max-w-[1800px] flex-wrap mb-20">
       <CVForm 
-      onPersonalChange={handlePersonalChange} 
       cv={cv} 
+      onPersonalChange={handlePersonalChange} 
       onExperienceChange={handleExperienceChange}
       onAddExp ={addExperience}
       onDeleteExp ={deleteExperience}
       onEducationChange={handleEducationChange}
       onAddEdu={addEducation}
       onDeleteEdu={deleteEducation}
+      onLoadExampleCV={LoadExampleCV}
       />
       <CVPreview cv={cv} />
       </div>
