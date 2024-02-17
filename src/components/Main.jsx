@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useRef } from 'react';
 import CVForm from "./CVForm/CVForm";
 import Header from "./Header";
 import CVPreview from "./CVPreview/CVPreview";
 import exampleCV from "./Utils/emptyCv";
 import sampleCV from "./Utils/exampleCV";
+import ReactToPrint, { useReactToPrint } from 'react-to-print';
 
 export default function Main() {
   const [cv,setCv] = useState(exampleCV)
@@ -110,10 +112,13 @@ export default function Main() {
   const resetCV = () =>{
     setCv(exampleCV)
   }
+
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({ content: () => componentRef.current });
+    
   
   return (
     <div>
-      <Header/>
       <div className="flex gap-8 pt-8 justify-center m-auto max-w-[1800px] flex-wrap mb-20">
       <CVForm 
       cv={cv} 
@@ -126,8 +131,9 @@ export default function Main() {
       onDeleteEdu={deleteEducation}
       onLoadExampleCV={LoadExampleCV}
       onResetCV={resetCV}
+      onPrintCV={handlePrint}
       />
-      <CVPreview cv={cv} />
+      <CVPreview cv={cv} ref={componentRef} />
       </div>
     </div>
   );
