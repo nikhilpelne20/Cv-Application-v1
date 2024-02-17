@@ -106,6 +106,10 @@ export default function Main() {
   const LoadExampleCV = ()=>{
     setCv(sampleCV)
   }
+
+  const resetCV = () =>{
+    setCv(exampleCV)
+  }
   
   return (
     <div>
@@ -121,6 +125,7 @@ export default function Main() {
       onAddEdu={addEducation}
       onDeleteEdu={deleteEducation}
       onLoadExampleCV={LoadExampleCV}
+      onResetCV={resetCV}
       />
       <CVPreview cv={cv} />
       </div>

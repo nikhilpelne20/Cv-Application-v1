@@ -14,6 +14,7 @@ export default function CVForm({
   onDeleteEdu,
   onEducationChange,
   onLoadExampleCV,
+  onResetCV
 }) {
   console.log(cv.education);
   return (
@@ -36,7 +37,7 @@ export default function CVForm({
           Generate PDF
         </button>
         <button onClick={onLoadExampleCV} className="button-blue">Load Example</button>
-        <button>Reset</button>
+        <button onClick={onResetCV} >Reset</button>
       </Section>
     </div>
   );
