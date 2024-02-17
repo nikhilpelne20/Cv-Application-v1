@@ -25,6 +25,7 @@ const exampleCV = {
             universityName:"",
             city:"",
             degree:"",
+            subject:"",
             from:"",
             to:"",
         },

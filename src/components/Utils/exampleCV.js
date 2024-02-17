@@ -34,6 +34,7 @@ const sampleCV = {
             universityName:"Kuina Swordsmanship Dojo",
             city:"Shimotsuki Village",
             degree:"Swordsmanship Mastery",
+            subject:"Senturyu",
             from:"1990",
             to:"1995"
         },
@@ -42,6 +43,7 @@ const sampleCV = {
             universityName:"Mystical Sword Training Institute",
             city:"Wano Country",
             degree:"Advanced Sword Techniques",
+            subject:"Senturyu",
             from:"1996",
             to:"1999"
         }

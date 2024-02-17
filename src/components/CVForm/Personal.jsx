@@ -58,9 +58,11 @@ export default function Personal({onChange,personalInfo}) {
             value={personalInfo.email}
         />
         <TextArea
+            onChange={(e)=>onChange(e)}
             type="text"
             name="description"
             placeholder="Description"
+            value={personalInfo.description}
         />
     </Section>
   )

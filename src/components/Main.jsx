@@ -85,6 +85,7 @@ export default function Main() {
           universityName:"",
           city:"",
           degree:"",
+          subject:"",
           from:"",
           to:"",
         },
