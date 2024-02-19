@@ -17,7 +17,6 @@ export default function CVForm({
   onResetCV,
   onPrintCV,
 }) {
-  console.log(cv.education);
   return (
     <div className="w-[210mm] flex flex-col shadow-lg rounded border p-4 bg-gray-100 gap-2 ">
       <Personal onChange={onPersonalChange} personalInfo={cv.personalInfo} />
