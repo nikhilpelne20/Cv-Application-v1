@@ -18,7 +18,7 @@ export default function CVForm({
   onPrintCV,
 }) {
   return (
-    <div className="w-[210mm] flex flex-col shadow-lg rounded border p-4 bg-gray-100 gap-2 ">
+    <div className="w-[190mm] flex flex-col shadow-xl rounded border p-4 bg-gray-100 gap-2 ">
       <Personal onChange={onPersonalChange} personalInfo={cv.personalInfo} />
       <Experience
         experience={cv.experience}
