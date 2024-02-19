@@ -1,8 +1,10 @@
+import emptyAvatar from "../../assets/empty_avatar.png"
 const exampleCV = {
     personalInfo:{
         firstName:"",
         lastName:"",
         title:"",
+        photo: emptyAvatar,
         address:"",
         phoneNumber:"",
         email:"",

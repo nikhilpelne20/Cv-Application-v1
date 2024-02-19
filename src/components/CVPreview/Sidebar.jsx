@@ -1,12 +1,11 @@
 import React from "react";
 import Title from "../Utils/Title";
-import emptyAvatar from "../../assets/empty_avatar.png";
 
 export default function Sidebar({personalInfo}) {
   return (
     <div className="bg-gray-200 p-4">
       <div>
-        <img src={emptyAvatar} alt="profile" />
+        <img className="mb-8" src={personalInfo.photo} alt="profile" />
       </div>
       <Title title="Personal Details" />
       <div>

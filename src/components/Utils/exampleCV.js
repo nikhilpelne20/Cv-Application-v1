@@ -1,8 +1,11 @@
+import exampleAvtar from "../../assets/Zoro.jpg"
+
 const sampleCV = {
     personalInfo:{
         firstName:"Roronoa",
         lastName:"Zoro",
         title:"Strongest Swordsman",
+        photo: exampleAvtar,
         address:"321 Sword Street, Wano Country",
         phoneNumber:"9232125311",
         email:"zoro_swordsman@wano.com",
