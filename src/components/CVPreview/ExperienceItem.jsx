@@ -11,8 +11,8 @@ export default function ExperienceItem({ experience }) {
           <p className="w-[40px]">{exp.to}</p>
         </div>
         <div>
-          <p>
-            {exp.position} <span className="font-bold">{exp.company}</span>
+          <p className="font-bold">
+            {exp.position}, <span className="font-normal italic">{exp.company}</span>
           </p>
           <p>{exp.workExperience},{exp.city}</p>
         </div>

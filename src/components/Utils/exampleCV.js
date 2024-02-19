@@ -24,7 +24,7 @@ const sampleCV = {
         {
             id:crypto.randomUUID(),
             position:"Bounty Hunter",
-            company:"Various",
+            company:"Freelancing",
             workExperience:"Before joining the Straw Hat Pirates, Zoro worked as a bounty hunter, honing his swordsmanship skills and gaining a reputation for his strength and determination in capturing criminals.",
             city:"East Blue",
             from:"1995",
