@@ -10,7 +10,12 @@ import ReactToPrint, { useReactToPrint } from 'react-to-print';
 export default function Main() {
   const [cv,setCv] = useState(exampleCV)
   const handlePersonalChange = (e)=>{
-    const {name,value} = e.target
+    const {name,value,type} = e.target
+
+    if(type=== 'file'){
+      handleFileChange(e)
+      return;
+    }
     
     setCv((prevState)=>({
       ...prevState , personalInfo:{
@@ -18,6 +23,24 @@ export default function Main() {
       }
 
     }))
+  }
+
+  const handleFileChange = (e)=>{
+    const {name} = e.target
+    const file = e.target.files[0]
+    
+    if(!file) return;
+    
+    const reader = new FileReader()
+    reader.onload = () =>{
+      setCv((prevState)=>({
+        ...prevState,personalInfo:{
+          ...prevState.personalInfo,
+          [name]:reader.result
+        }
+      }))
+    }
+    reader.readAsDataURL(file)
   }
 
   const addExperience = ()=>{

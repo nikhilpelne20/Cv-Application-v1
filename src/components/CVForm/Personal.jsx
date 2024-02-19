@@ -2,6 +2,7 @@ import React from 'react'
 import Section from '../Utils/Section'
 import Input from '../Utils/Input'
 import TextArea from '../Utils/TextArea'
+import FileInput from '../Utils/FileInput'
 
 export default function Personal({onChange,personalInfo}) {
   return (
@@ -28,11 +29,11 @@ export default function Personal({onChange,personalInfo}) {
             placeholder="Title"
             value={personalInfo.title}
         />
-        <Input
-            type="file"
-            name="title"
+        <FileInput
+            onChange={(e)=>onChange(e)}
+            name="photo"
             label="Photo"
-            placeholder="Photo"
+            value={personalInfo.photo}
         />
         <Input
             onChange={(e)=>onChange(e)}

@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function FileInput({ name, label, placeholder }) {
+export default function FileInput({ onChange, label, name }) {
   return (
-    <label>
-      <input className="border-2 border-gray-300 p-1 mb-1 rounded" type="file" name={name} placeholder={placeholder}></input>
-    </label>
+<label className="border-2 border-gray-300 p-1 mb-1 rounded">
+    <input type="file" onChange={onChange} name={name}></input>
+    {label}
+</label>
   );
 }
