@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import CVForm from "./CVForm/CVForm";
 import CVPreview from "./CVPreview/CVPreview";
-import exampleCV from "./Utils/emptyCv";
+import exampleCV from "./Utils/emptyCV";
 import sampleCV from "./Utils/exampleCV";
 import ReactToPrint, { useReactToPrint } from "react-to-print";
 
