@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../Utils/Title";
 
-export default function Sidebar({personalInfo}) {
+export default function Sidebar({ personalInfo }) {
   return (
     <div className="bg-gray-200 p-4">
       <div>
@@ -17,7 +17,7 @@ export default function Sidebar({personalInfo}) {
         <p>{personalInfo.phoneNumber}</p>
       </div>
       <div>
-        <p className="text-lg font-bold" >Email </p>
+        <p className="text-lg font-bold">Email </p>
         <p>{personalInfo.email}</p>
       </div>
     </div>

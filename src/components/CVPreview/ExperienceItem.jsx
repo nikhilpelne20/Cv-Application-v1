@@ -12,9 +12,12 @@ export default function ExperienceItem({ experience }) {
         </div>
         <div>
           <p className="font-bold">
-            {exp.position}, <span className="font-normal italic">{exp.company}</span>
+            {exp.position},{" "}
+            <span className="font-normal italic">{exp.company}</span>
           </p>
-          <p>{exp.workExperience},{exp.city}</p>
+          <p>
+            {exp.workExperience},{exp.city}
+          </p>
         </div>
       </div>
     );
