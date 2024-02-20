@@ -44,24 +44,6 @@ export default function Main() {
     reader.readAsDataURL(file);
   };
 
-  const addExperience = () => {
-    setCv((prevState) => ({
-      ...prevState,
-      experience: [
-        ...prevState.experience,
-        {
-          id: crypto.randomUUID(),
-          position: "",
-          company: "",
-          workExperience: "",
-          city: "",
-          from: "",
-          to: "",
-        },
-      ],
-    }));
-  };
-
   const handleExperienceChange = (e, id) => {
     const { name, value } = e.target;
     const updateExperience = cv.experience.map((exp) => {
@@ -77,6 +59,24 @@ export default function Main() {
     setCv((prevState) => ({
       ...prevState,
       experience: updateExperience,
+    }));
+  };
+
+  const addExperience = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          id: crypto.randomUUID(),
+          position: "",
+          company: "",
+          workExperience: "",
+          city: "",
+          from: "",
+          to: "",
+        },
+      ],
     }));
   };
 
